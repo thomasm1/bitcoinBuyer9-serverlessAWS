@@ -34,3 +34,6 @@ sudo service codedeploy-agent status
 1. env: ec2-instances
 2. tag: find the appName: armchairBitcoinist
 3. uncheck load balancer
+  
+FINALLY:: TERMINATE INSTANCE!! (make EBS snapshot & delete EBS Volume...)
+
