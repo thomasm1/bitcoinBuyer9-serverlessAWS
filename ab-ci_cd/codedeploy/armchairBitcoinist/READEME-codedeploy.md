@@ -31,9 +31,9 @@ sudo service codedeploy-agent status
 
 ----console----
 1. codedeploy--> apps--> deployment groups-->create dg--> choose role
-1. env: ec2-instances
-2. tag: find the appName: armchairBitcoinist
-3. uncheck load balancer
+2. env: ec2-instances
+3. tag: find the appName: armchairBitcoinist
+4. uncheck load balancer
   
 FINALLY:: TERMINATE INSTANCE!! (make EBS snapshot & delete EBS Volume...)
 
