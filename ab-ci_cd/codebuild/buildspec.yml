@@ -12,9 +12,10 @@ phases:
     build:
         commands:
             - echo "build block"
-            - echo "run some tests"
-            - grep -Fq "Completed!" index.html
+            - echo "run some tests - looking for 'Armchair' string..."
+            - grep -Fq "Armchair" index.html
     post_build:
         commands:
             - echo "post build phase"
             
+z
