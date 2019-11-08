@@ -2,6 +2,7 @@
 # update: bucket,Key pair name, tag-name, region 
 # WINDOWS: use ^ (Shift + 6) 
 # LINUX: use \ for line continuation. 
+
 CodePipeline #1:
 1. S3: upload cloudformation template
 2. Add # CloudFormation Custom Policy for IAM & EC2, below

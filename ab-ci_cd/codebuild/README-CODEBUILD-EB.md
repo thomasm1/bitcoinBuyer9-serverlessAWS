@@ -11,4 +11,11 @@
 #### IMAGE: standard 2.0
 #### TIMEOUT: not 1 hour, set for 5 mins
 #### LOGS: CloudWatch, not S3
-#### Finally: Add BuildSpec.yaml
+#### Finally: Add BuildSpec.yaml 
+* -- test by running grep -Fq "Armchair" index.html
+
+### CodePipeline
+* Stage 2: Build > CodeBuild
+    + Action Grp: TestForArmchairString
+        1. Artifact: Source ARtifact: 
+        2. Ouput Artifact: OutputOfTest
