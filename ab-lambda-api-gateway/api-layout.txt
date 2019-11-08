@@ -1,0 +1,68 @@
+put - create/post
+armchairbitcoinist.com/users/{id}
+    *Use Lambda Proxy integration  (allows lambda to access various request parameters through the request body).
+    
+    Method Request:: put
+    **settings-AWS_IAM
+    **request-validator: validate body
+    ** API key (not yet, so false)
+    *** header: Content-Type
+    **** request Body 1. create model, then add ...
+
+    Create Model::
+    * name: ArmchairUser
+    **Content-Type: application/json	
+    
+getAll - read
+armchairbitcoinist.com/users
+
+update
+armchairbitcoinist.com/users/{id}
+
+delete
+armchairbitcoinist.com/users/{id}
+ Method Request:: delete
+    **settings-AWS_IAM
+    **request-validator: no body, so validate query string parameters and headers
+    ** API key (not yet, so false)
+    *** header: Content-Type
+    **** request Body 1. create model, then add ...
+---------MODEL----------
+  {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ArmchairUserInputModel",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "uid": { "type": "string" },
+    "name": { "type": "string" },
+    "firstname": { "type": "string" },
+    "lastname": { "type": "string" },
+    "email": { "type": "string" },
+    "phone": { "type": "number" },
+    "contactType": { "type": "string" },
+    "userGroup": { "type": "string" },
+    "dateOfBirth": { "type": "string" },
+    "isActive": { "type": "boolean" }, 
+    "photoPath": { "type": "string" }
+  }
+}
+--------
+Path -------- 3
+HEADER ------"Content-Type" : "application/json"
+REQUEST BODY-------------
+   {
+        "id": "3",
+        "uid": "PW3r1iqZzOWJaMfuzyjTDCckCnn1",
+        "name": "Tom-New Maestas",
+        "firstname": "Tom-New",
+        "lastname": "Maestas",
+        "email": "thomasm1.maestas@gmail.com",
+        "phone": 5055087707,
+        "contactType": "email",
+        "userGroup": "5",
+        "dateOfBirth":  "2020-09-03",
+        "isActive": true,
+        "photoPath": "assets/images/a.png"
+      }
+	  
