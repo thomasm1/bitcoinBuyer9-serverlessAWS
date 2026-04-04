@@ -14,7 +14,8 @@ Resources:
     Properties:
       InstanceType: t2.micro
       ImageId: ami-0bdb1d6c15a40392c
-      KeyName: !Ref KeyName
+      KeyName: 
+        Ref: KeyName
       SecurityGroups:
        - Ref: InstanceSecurityGroup
       Tags:
@@ -33,4 +34,5 @@ Resources:
 Outputs: 
   InstanceID:
     Description: The Instance ID
-    Value: !Ref MyEC2Instance
+    Value:
+      Fn::Ref: MyEC2Instance
